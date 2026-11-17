@@ -1,5 +1,9 @@
 Sales Performance Dashboard | Power BI
 
+## Dashboard Preview
+
+![Sales Performance Dashboard](dashboard-preview.png)
+
 Project Overview
 
 An interactive Power BI dashboard designed to explore sales performance, profitability, customer activity, and regional sales distribution.
