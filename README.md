@@ -65,5 +65,42 @@ Author
 Anton Shuleshov
 
 Marketing & Business Analytics Professional | Transitioning into Data Analytics & Business Intelligence
+## Data Source & Dataset
 
-Netherlands
+This portfolio project analyzes a structured sales dataset containing transactional, customer, product, division, geographic, and time-related information. The dashboard uses sales, discount, profit, quantity, and customer metrics to support business performance analysis.
+
+Dataset provenance: To be confirmed. The dashboard is presented as a portfolio exercise and does not represent verified financial results of a named company.
+
+## Business Insights
+
+The dashboard enables users to:
+- Monitor revenue, gross profit, and gross profit margin.
+- Compare sales performance across regions and business divisions.
+- Examine monthly sales trends and identify changes over time.
+- Analyze customer contributions and the top 10 customers by sales.
+- Explore discounts and their relationship with profitability.
+
+Example dashboard view (2018, Company division):
+- Total Sales: 164.89M
+- Gross Profit: 68.17M
+- Gross Profit Margin: 41.3%
+- Customers: 540
+- Discount Rate: 39.7%
+
+These figures reflect the selected filters and are not overall dataset totals.
+
+## Data Model & Analytical Measures
+
+The Power BI report uses multiple related data tables, including customer, division, region, and sales-related information. It combines interactive visuals, KPI cards, geographic analysis, and report-level filtering.
+
+Measures displayed in the dashboard include:
+- Total Sales
+- Gross Profit
+- Gross Profit Margin (%)
+- Total Discount
+- Discount Rate (%)
+- Sales per Item
+- Average Sales per Customer
+- Average Discount
+
+The report demonstrates Power BI data modeling, business metric interpretation, and interactive dashboard design. Specific DAX expressions and relationships can be documented separately after verification in the source Power BI project
