@@ -1,87 +1,96 @@
-Sales Performance Dashboard | Power BI
+# Sales Performance Dashboard | Business Intelligence & Data Analytics
 
-A business intelligence portfolio project exploring sales performance, profitability, customer activity, discounting, and regional trends through an interactive Power BI report.
+### Power BI · Power Query · DAX · Data Modeling · Commercial Performance
 
-Dashboard preview
+An end-to-end business intelligence project transforming sales transactions and related customer reference tables into an interactive management dashboard. The report combines **data preparation, relationship modeling, KPI validation, and business-oriented visual analysis**—not just chart creation.
 
-Sales Performance Dashboard
+![Sales Performance Dashboard](dashbord.png)
 
-Project overview
+> **Project type:** Educational data analytics portfolio project  
+> **Author:** Anton Shuleshov  
+> **Primary tools:** Microsoft Power BI Desktop, Power Query (M), DAX, Microsoft Excel
 
-The dashboard brings together sales transactions and reference data to provide a consolidated view of commercial performance. It is designed to help users explore revenue, gross profit, discount levels, customer activity, and differences across regions and business divisions.
+## Business problem
 
-Key performance indicators
+How can sales managers monitor revenue and profitability, evaluate discounting, identify important customers, and compare performance across time, regions and business divisions?
 
-|KPI                      |Dashboard value|
-|-------------------------|--------------:|
-|Total Sales              |20.82M         |
-|Gross Profit             |9.15M          |
-|Gross Profit Margin      |43.9%          |
-|Customers                |312            |
-|Quantity Sold            |326.63K        |
-|Total Discount           |12.29M         |
-|Discount Rate            |37.1%          |
-|Sales per Item           |63.74          |
-|Average Sale per Customer|66.72K         |
-|Average Discount         |1.84K          |
+## Analytical workflow
 
-Values shown are from the saved dashboard view and may change with filters. Monetary units follow the source dataset; no currency is assumed here.
+| Stage | Implementation | Demonstrated skill |
+| --- | --- | --- |
+| Data acquisition | Import five related Excel datasets | Multi-source data integration |
+| Data profiling | Inspect types, missing values and inconsistent dates | Data-quality assessment |
+| Data preparation | Transform sales and lookup tables using Power Query | ETL / data cleaning |
+| Data validation | Correct a margin field incorrectly typed as a date; handle Excel date representations and missing delivery dates | Troubleshooting and quality controls |
+| Data modeling | Relate transactions, customers, addresses, regions and divisions using business keys | Relational modeling, filter context |
+| KPI calculations | Calculate and aggregate sales, gross profit, margins, discounts and customer metrics | DAX, business metric definitions |
+| Analysis | Compare monthly trends, regions, divisions and major customers | Exploratory and commercial analytics |
+| Delivery | Build interactive visuals and slicers; export PBIX and PDF | BI reporting and data storytelling |
 
-Report features
+## Data sources and relationships
 
-● Monthly sales trend
+| Table | Purpose |
+| --- | --- |
+| `SALESDATA` (sales fact table / `Sheet1` in the model) | Sales transactions, quantities, values and dates |
+| `CUSTOMERS` | Customer-level attributes and business keys |
+| `CUSTOMERADDRESS` | Geographic customer information |
+| `REGION` | Region lookup |
+| `DIVISION` | Division lookup |
 
-● Sales distribution by region
+The model uses customer and lookup identifiers to connect transactional and descriptive data. Relationships and aggregation behavior should be reviewed when adapting the model to new data.
 
-● Sales by business division
+## Dashboard KPIs
 
-● Top 10 customers by sales amount
+- Total Sales
+- Gross Profit
+- Gross Profit Margin
+- Customers
+- Quantity Sold
+- Total Discount
+- Discount Rate
+- Sales per Item
+- Average Sale per Customer
+- Average Discount
 
-● Country map for geographic context
+## Dashboard analysis
 
-● Interactive filters for region, division, and year
+- **Monthly Sales Trend:** sales performance over time.
+- **Sales by Region:** geographic business comparisons.
+- **Sales by Division:** performance across organizational units.
+- **Top 10 Customers:** customer contribution and concentration.
+- **Sales by Country:** geographic context; map-service rendering may vary by client and locale.
+- **Interactive filters:** region, division and year.
 
-Data sources
+## Technical competencies
 
-The report uses five educational Excel datasets stored in Data/:
+**Power Query / ETL:** import, type conversion, date handling, data cleanup and troubleshooting.  
+**Data modeling:** multi-table relationships, fact and lookup tables, aggregation logic.  
+**DAX:** measures for financial, sales and customer performance indicators.  
+**Business intelligence:** KPI selection, performance comparison, interactive reporting and presentation.
 
-|File                  |Purpose                                  |
-|----------------------|-----------------------------------------|
-|`SALESDATA.xlsx`      |Sales transactions and financial measures|
-|`CUSTOMERS.xlsx`      |Customer reference information           |
-|`CUSTOMERADDRESS.xlsx`|Customer address and country information |
-|`REGION.xlsx`         |Region lookup data                       |
-|`DIVISION.xlsx`       |Business division lookup data            |
+This repository does **not** claim SQL, Hive, Pig or R were used to produce this particular dashboard. Those technologies are documented in the relevant projects and coursework.
 
-The data model connects sales, customer, address, region, and division information using the relevant identifiers.
+## Repository files
 
-Tools and skills demonstrated
+- `Sales_Performance_Dashboard.pbix` — interactive Power BI report *(use the actual filename shown in this repository if different)*.
+- `Sales_Performance_Dashboard.pdf` — static report *(filename may differ)*.
+- `dashbord.png` — dashboard screenshot.
+- `Data/` — educational source spreadsheets.
+- PBIP source files, where included, contain the editable report and semantic model definitions.
 
-● Power BI Desktop: interactive dashboard design and reporting
+## Reproduce or adapt
 
-● Power Query: importing, cleaning, and typing Excel data, including date fields
+1. Download the PBIX or the complete PBIP project and its report/model folders.
+2. Open in a recent version of Power BI Desktop.
+3. If refreshing, update Excel source paths in **Transform data → Data source settings** to the location of the files in `Data/`.
+4. Refresh, review model relationships and validate KPIs against the source data.
+5. Use slicers to explore results by business unit, geography and year.
 
-● Data modeling: relationships across transaction and lookup tables
+## Scope and interpretation
 
-● DAX: measures and KPIs for sales and profitability
+This is an educational portfolio dataset, not a live operational reporting system. Values depend on source data and filter context. Business conclusions should be interpreted within those constraints.
 
-● Data visualization: trend, category, customer, and geographic views
+---
 
-Repository files
+**Anton Shuleshov** · Business & Data Analytics · Power BI / Data Modeling / ETL
 
-|File                                                                  |Description                                                                                    |
-|----------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
-|[`Sales_Performance_Portfolio.pbix`](Sales_Performance_Portfolio.pbix)|Power BI Desktop report; open with Power BI Desktop                                            |
-|[`Sales_Performance_Portfolio.pdf`](Sales_Performance_Portfolio.pdf)  |Static PDF export                                                                              |
-|[`dashbord.png`](dashbord.png)                                        |Dashboard screenshot                                                                           |
-|[`Sales_Performance_Portfolio.pbip`](Sales_Performance_Portfolio.pbip)|Power BI Project entry file; requires its associated project folders to be usable independently|
-|[`Data/`](Data/)                                                      |Educational Excel source files                                                                 |
-
-Opening the report: Download the .pbix file and open it in Power BI Desktop. To refresh data, update the Excel source paths to the location of the downloaded Data folder on your computer.
-
-Note on the map: The country map is included as geographic context. Sales-by-country markers were not fully validated in the published view, so the map should not be interpreted as a verified country-level sales comparison.
-
-Author
-
-Anton Shuleshov
-Data Analytics & Business Intelligence Portfolio
