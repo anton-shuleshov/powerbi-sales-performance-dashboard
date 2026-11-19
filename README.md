@@ -72,9 +72,9 @@ This repository does **not** claim SQL, Hive, Pig or R were used to produce this
 
 ## Repository files
 
-- `Sales_Performance_Dashboard.pbix` — interactive Power BI report *(use the actual filename shown in this repository if different)*.
-- `Sales_Performance_Dashboard.pdf` — static report *(filename may differ)*.
-- `dashbord.png` — dashboard screenshot.
+- `Sales_Perfomance_Portfolio.pbix` — interactive Power BI report.
+- `Sales_Perfomance_Portfolio.pdf` — static report.
+- `dashbord.png` — dashboard screenshot (original filename retained for compatibility).
 - `Data/` — educational source spreadsheets.
 - PBIP source files, where included, contain the editable report and semantic model definitions.
 
